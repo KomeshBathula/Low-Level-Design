@@ -1,4 +1,4 @@
-package SolidPrinciples.ISP;
+package SolidPrinciples.LiskowSubstitutionPrinciple;
 
 public class CurrentAccount implements DepositAccount, WithdrawAccount{
     public void deposit(double amount) {

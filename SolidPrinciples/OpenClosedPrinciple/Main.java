@@ -1,4 +1,4 @@
-package SolidPrinciples.OCP;
+package SolidPrinciples.OpenClosedPrinciple;
 
 public class Main {
     public static void main(String[] args) {

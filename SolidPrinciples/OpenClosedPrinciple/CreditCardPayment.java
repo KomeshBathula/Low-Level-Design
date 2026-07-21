@@ -1,4 +1,4 @@
-package SolidPrinciples.OCP;
+package SolidPrinciples.OpenClosedPrinciple;
 
 public class CreditCardPayment implements PaymentMethod{
     public void pay(double amount) {

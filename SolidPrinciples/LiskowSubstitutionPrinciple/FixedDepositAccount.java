@@ -1,4 +1,4 @@
-package SolidPrinciples.LSP;
+package SolidPrinciples.LiskowSubstitutionPrinciple;
 
 public class FixedDepositAccount implements DepositAccount{
     public void deposit(double amount) {

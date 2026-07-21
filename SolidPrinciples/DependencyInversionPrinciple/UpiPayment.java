@@ -1,4 +1,4 @@
-package SolidPrinciples.DIP;
+package SolidPrinciples.DependencyInversionPrinciple;
 
 class UpiPayment implements PaymentMethod {
 

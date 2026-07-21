@@ -1,4 +1,4 @@
-package SolidPrinciples.LSP;
+package SolidPrinciples.InterfaceSegregationPrinciple;
 
 public class CurrentAccount implements DepositAccount, WithdrawAccount{
     public void deposit(double amount) {

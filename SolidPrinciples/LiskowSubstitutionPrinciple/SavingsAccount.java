@@ -1,4 +1,4 @@
-package SolidPrinciples.LSP;
+package SolidPrinciples.LiskowSubstitutionPrinciple;
 
 public class SavingsAccount implements DepositAccount, WithdrawAccount{
     public void deposit(double amount) {

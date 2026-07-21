@@ -1,4 +1,4 @@
-package SolidPrinciples.ISP;
+package SolidPrinciples.InterfaceSegregationPrinciple;
 
 public class SavingsAccount implements DepositAccount, WithdrawAccount{
     public void deposit(double amount) {

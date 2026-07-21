@@ -1,4 +1,4 @@
-package SolidPrinciples.LSP;
+package SolidPrinciples.InterfaceSegregationPrinciple;
 
 public class BankService {
     public void processDeposit(DepositAccount account, double amount) {

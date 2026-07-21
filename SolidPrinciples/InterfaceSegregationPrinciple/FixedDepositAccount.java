@@ -1,4 +1,4 @@
-package SolidPrinciples.ISP;
+package SolidPrinciples.InterfaceSegregationPrinciple;
 
 public class FixedDepositAccount implements DepositAccount{
     public void deposit(double amount) {

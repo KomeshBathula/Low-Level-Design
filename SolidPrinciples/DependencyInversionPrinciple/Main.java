@@ -1,4 +1,4 @@
-package SolidPrinciples.DIP;
+package SolidPrinciples.DependencyInversionPrinciple;
 
 public class Main {
 

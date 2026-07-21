@@ -1,4 +1,4 @@
-package SolidPrinciples.ISP;
+package SolidPrinciples.LiskowSubstitutionPrinciple;
 
 public class BankService {
     public void processDeposit(DepositAccount account, double amount) {
