@@ -9,9 +9,11 @@ Structural design patterns explain how to assemble **objects and classes into la
 | Design Pattern | Category | Intent | Key Benefit |
 | :--- | :--- | :--- | :--- |
 | **[Adapter Pattern](./AdapterPattern)** | Structural | Converts the interface of a class into another interface clients expect, letting incompatible interfaces work together. | Integrates third-party/legacy payment gateways (Stripe, Razorpay) without modifying existing code. |
+| **[Bridge Pattern](./BridgePattern)** | Structural | Decouples an abstraction from its implementation so that the two can vary independently. | Prevents Cartesian class explosion ($N \times M \to N + M$) when pairing remotes with devices. |
 | **[Composite Pattern](./CompositePattern)** | Structural | Composes objects into tree structures to represent part-whole hierarchies, treating individual objects and compositions uniformly. | Uniformly calculates sizes and displays details across nested file & folder hierarchies. |
 | **[Decorator Pattern](./DecoratorPattern)** | Structural | Attaches additional responsibilities to an object dynamically at runtime without modifying its class. | Dynamically layers features (e.g., Cheese, Mushroom toppings on Pizza) avoiding class explosion. |
 | **[Facade Pattern](./FacadePattern)** | Structural | Provides a unified, higher-level interface to a set of interfaces in a complex subsystem. | Simplifies complex e-commerce order processing workflows behind a single `placeOrder()` entry point. |
+| **[Flyweight Pattern](./FlyweightPattern)** | Structural | Minimizes memory usage by sharing common intrinsic state among large numbers of similar objects. | Efficiently renders massive forests of trees by sharing intrinsic `TreeType` objects via factory caching. |
 | **[Proxy Pattern](./ProxyPattern)** | Structural | Provides a surrogate or placeholder for another object to control access to it. | Implements lazy loading and caching for heavy resources (e.g., loading high-res images from disk). |
 
 ---
@@ -21,9 +23,11 @@ Structural design patterns explain how to assemble **objects and classes into la
 ```text
 StructuralDesignPatterns/
 ├── AdapterPattern/     # Unified payment processing adapting Stripe & Razorpay SDKs
+├── BridgePattern/      # Remote control abstraction decoupled from TV & Radio device implementations
 ├── CompositePattern/   # Hierarchical file system (File & Folder tree nodes)
 ├── DecoratorPattern/   # Dynamic pizza topping customization via object composition
 ├── FacadePattern/      # E-commerce fulfillment facade orchestrating inventory, payment, shipping, invoice & notification
+├── FlyweightPattern/   # Shared intrinsic state for memory-efficient tree rendering
 └── ProxyPattern/       # Virtual proxy handling lazy loading & caching of disk images
 ```
 
@@ -32,7 +36,9 @@ StructuralDesignPatterns/
 ## 🎯 Quick Decision Guide
 
 - Need to **integrate incompatible interfaces or legacy libraries**? 👉 Use **Adapter**
+- Need to **decouple control logic from platform implementation** to avoid class explosion? 👉 Use **Bridge**
 - Need to **represent part-whole tree hierarchies** and treat leaves and containers uniformly? 👉 Use **Composite**
 - Need to **dynamically add features/responsibilities at runtime** without subclass explosion? 👉 Use **Decorator**
 - Need a **simplified single entry point for a complex multi-class subsystem**? 👉 Use **Facade**
+- Need to **reduce memory overhead when creating millions of fine-grained objects**? 👉 Use **Flyweight**
 - Need to **control access, defer heavy initialization, or cache responses** for an object? 👉 Use **Proxy**
