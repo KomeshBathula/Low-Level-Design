@@ -45,12 +45,12 @@ Patterns that abstract the object instantiation process, making systems independ
 Patterns that ease design by identifying simple ways to realize relationships between entities.
 
 - **[Adapter Pattern](./StructuralDesignPatterns/AdapterPattern)**: Convert the interface of a class into another interface expected by clients.
-- **[Bridge Pattern](./StructuralDesignPatterns/BridgePattern)**: Decouple an abstraction from its implementation so that the two can vary independently.
-- **[Composite Pattern](./StructuralDesignPatterns/CompositePattern)**: Compose objects into tree structures to represent part-whole hierarchies.
 - **[Decorator Pattern](./StructuralDesignPatterns/DecoratorPattern)**: Attach additional responsibilities to an object dynamically.
 - **[Facade Pattern](./StructuralDesignPatterns/FacadePattern)**: Provide a unified high-level interface to a set of interfaces in a subsystem.
-- **[Flyweight Pattern](./StructuralDesignPatterns/FlyweightPattern)**: Share fine-grained objects efficiently to minimize memory usage.
+- **[Composite Pattern](./StructuralDesignPatterns/CompositePattern)**: Compose objects into tree structures to represent part-whole hierarchies.
 - **[Proxy Pattern](./StructuralDesignPatterns/ProxyPattern)**: Provide a surrogate or placeholder for another object to control access to it.
+- **[Bridge Pattern](./StructuralDesignPatterns/BridgePattern)**: Decouple an abstraction from its implementation so that the two can vary independently.
+- **[Flyweight Pattern](./StructuralDesignPatterns/FlyweightPattern)**: Share fine-grained objects efficiently to minimize memory usage.
 
 ---
 
