@@ -57,9 +57,9 @@ graph TD
     PaymentFactory -->|type == 'upi'| UPI[UPIPayment]
     PaymentFactory -->|type == 'paypal'| PP[PaypalPayment]
     
-    CC ..|> Payment[<<interface>><br/>Payment]
-    UPI ..|> Payment
-    PP ..|> Payment
+    CC -.->|implements| Payment[<<interface>><br/>Payment]
+    UPI -.-> Payment
+    PP -.-> Payment
     
     Client -->|2. Invokes pay method| Payment
 

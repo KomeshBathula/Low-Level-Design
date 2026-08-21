@@ -60,9 +60,9 @@ graph TD
     Client[Main Class] -->|1. Configures context & strategy| Service[PaymentService Context]
     Service -->|2. Delegates makePayment| StrategyInterface["PaymentStrategy Interface<br/>(pay)"]
 
-    StrategyInterface <|.. UPI[UpiPayment]
-    StrategyInterface <|.. Card[CardPayment]
-    StrategyInterface <|.. PayPal[PaypalPayment]
+    UPI[UpiPayment] -.->|implements| StrategyInterface
+    Card[CardPayment] -.->|implements| StrategyInterface
+    PayPal[PaypalPayment] -.->|implements| StrategyInterface
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style Service fill:#f9f,stroke:#333,stroke-width:2px

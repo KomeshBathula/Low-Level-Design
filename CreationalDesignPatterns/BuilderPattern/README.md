@@ -52,7 +52,7 @@ graph TD
     BuilderConstructor -->|2. Fluent method chaining| ChainRam[".ram(16)"]
     ChainRam -->|3. Fluent method chaining| ChainSSD[".ssd(512)"]
     ChainSSD -->|4. Fluent method chaining| ChainTouch[".touchScreen(true)"]
-    ChainTouch -->|5. Calls build()| BuildMethod["build()"]
+    ChainTouch -->|5. Calls build| BuildMethod["build()"]
     BuildMethod -->|6. Instantiates private constructor| LaptopObj[("Laptop Instance (Immutable)")]
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px

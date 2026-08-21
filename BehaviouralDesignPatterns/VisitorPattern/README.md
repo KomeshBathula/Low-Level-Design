@@ -58,13 +58,13 @@ graph TD
     Client[Main Class] -->|1. Creates elements & visitor| Visitor[DiscountVisitor]
     Client -->|2. Calls accept| Product["Product Interface<br/>(accept)"]
 
-    Product <|.. Laptop[Laptop Element]
-    Product <|.. Mobile[Mobile Element]
-    Product <|.. Headphones[Headphones Element]
+    Laptop[Laptop Element] -.->|implements| Product
+    Mobile[Mobile Element] -.->|implements| Product
+    Headphones[Headphones Element] -.->|implements| Product
 
-    Laptop -->|3a. Double dispatch: visitor.visit(this)| Visitor
-    Mobile -->|3b. Double dispatch: visitor.visit(this)| Visitor
-    Headphones -->|3c. Double dispatch: visitor.visit(this)| Visitor
+    Laptop -->|3a. Double dispatch: visitor.visit| Visitor
+    Mobile -->|3b. Double dispatch: visitor.visit| Visitor
+    Headphones -->|3c. Double dispatch: visitor.visit| Visitor
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style Product fill:#ffd,stroke:#333,stroke-width:2px

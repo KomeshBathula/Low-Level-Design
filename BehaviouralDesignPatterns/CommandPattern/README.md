@@ -57,8 +57,8 @@ graph TD
     Client -->|2. Configures command in invoker| Remote[RemoteControl Invoker]
     Remote -->|3. Press button triggers execute| CommandInterface["Command Interface<br/>(execute)"]
 
-    CommandInterface <|.. OnCommand[LightOnCommand]
-    CommandInterface <|.. OffCommand[LightOffCommand]
+    OnCommand[LightOnCommand] -.->|implements| CommandInterface
+    OffCommand[LightOffCommand] -.->|implements| CommandInterface
 
     OnCommand -->|4a. Calls light.on| Receiver
     OffCommand -->|4b. Calls light.off| Receiver

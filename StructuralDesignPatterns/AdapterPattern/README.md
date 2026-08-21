@@ -61,8 +61,8 @@ graph TD
     Client[Main Class] -->|1. Instantiates service with adapter| Service[PaymentService]
     Service -->|2. Calls checkout| Target["PaymentProcessor Interface<br/>(processPayment)"]
 
-    Target <|.. StripeAdapter[StripeAdapter]
-    Target <|.. RazorpayAdapter[RazorpayAdapter]
+    StripeAdapter[StripeAdapter] -.->|implements| Target
+    RazorpayAdapter[RazorpayAdapter] -.->|implements| Target
 
     StripeAdapter -->|3a. Wraps & delegates| Stripe[StripeGateway<br/>pay]
     RazorpayAdapter -->|3b. Wraps & delegates| Razorpay[RazorpayGateway<br/>makePayment]

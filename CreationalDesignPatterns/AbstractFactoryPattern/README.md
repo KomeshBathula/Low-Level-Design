@@ -66,8 +66,8 @@ graph TD
     end
 
     Main -->|Uses| UIFactory
-    UIFactory <|.. WinFactory
-    UIFactory <|.. MacFactory
+    WinFactory -.->|implements| UIFactory
+    MacFactory -.->|implements| UIFactory
 
     WinFactory -->|Creates| WinButton
     WinFactory -->|Creates| WinCheckbox
@@ -75,10 +75,10 @@ graph TD
     MacFactory -->|Creates| MacButton
     MacFactory -->|Creates| MacCheckbox
 
-    Button <|.. WinButton
-    Button <|.. MacButton
-    Checkbox <|.. WinCheckbox
-    Checkbox <|.. MacCheckbox
+    WinButton -.->|implements| Button
+    MacButton -.->|implements| Button
+    WinCheckbox -.->|implements| Checkbox
+    MacCheckbox -.->|implements| Checkbox
 
     style Main fill:#bbf,stroke:#333,stroke-width:2px
     style UIFactory fill:#f9f,stroke:#333,stroke-width:2px

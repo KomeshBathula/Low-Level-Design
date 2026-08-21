@@ -60,11 +60,11 @@ graph TD
 
     Child3 -->|Contains| NestedChild["Photo.jpg (File)"]
 
-    Root ..|> Component["<<interface>><br/>FileSystemComponent"]
-    Child1 ..|> Component
-    Child2 ..|> Component
-    Child3 ..|> Component
-    NestedChild ..|> Component
+    Root -.->|implements| Component["<<interface>><br/>FileSystemComponent"]
+    Child1 -.-> Component
+    Child2 -.-> Component
+    Child3 -.-> Component
+    NestedChild -.-> Component
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style Component fill:#ffd,stroke:#333,stroke-width:2px

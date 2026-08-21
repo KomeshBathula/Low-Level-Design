@@ -61,9 +61,9 @@ graph TD
     D2 -->|Delegates & Appends| D1
     D1 -->|Delegates & Appends| Base
 
-    D2 ..|> Component["<<interface>><br/>Pizza"]
-    D1 ..|> Component
-    Base ..|> Component
+    D2 -.->|implements| Component["<<interface>><br/>Pizza"]
+    D1 -.-> Component
+    Base -.-> Component
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style Component fill:#ffd,stroke:#333,stroke-width:2px

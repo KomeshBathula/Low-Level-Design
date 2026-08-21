@@ -77,7 +77,7 @@ While **ISP** and **LSP** often address related structural issues in class hiera
 
 ```mermaid
 graph TD
-    subgraph Interface Segregation Principle (ISP)
+    subgraph "Interface Segregation Principle (ISP)"
         FatInterface[Monolithic Interface] -->|Refactor into| Thin1[DepositAccount Interface]
         FatInterface -->|Refactor into| Thin2[WithdrawAccount Interface]
         Thin1 -->|Implemented by| FD[FixedDepositAccount]
@@ -85,7 +85,7 @@ graph TD
         Thin2 -->|Implemented by| SA
     end
 
-    subgraph Liskov Substitution Principle (LSP)
+    subgraph "Liskov Substitution Principle (LSP)"
         LSPCheck{Can Subtype replace Supertype?}
         LSPCheck -- Yes --> SafeSubstitution[Behavioral Invariants Preserved]
         LSPCheck -- No --> BrokenContract[Violation: Throws UnsupportedOperationException]

@@ -63,8 +63,8 @@ graph TD
     Step2 --> Step3["3. pourIntoCup() (Concrete invariant)"]
     Step3 --> Step4["4. addExtras() (Abstract hook)"]
 
-    AbstractClass <|-- TeaSubclass[Tea Subclass]
-    AbstractClass <|-- CoffeeSubclass[Coffee Subclass]
+    TeaSubclass[Tea Subclass] -->|extends| AbstractClass
+    CoffeeSubclass[Coffee Subclass] -->|extends| AbstractClass
 
     Step2 .->|Overridden by| TeaSubclass
     Step4 .->|Overridden by| TeaSubclass

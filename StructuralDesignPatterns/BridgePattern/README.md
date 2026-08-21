@@ -61,11 +61,11 @@ graph TD
     Client[Main Class] -->|1. Couples at runtime| Remote[Remote Abstraction]
     Remote -->|2. Bridge Reference| Device["<<interface>><br/>Device Implementation"]
 
-    Remote <|-- BasicRemote[BasicRemote]
-    Remote <|-- AdvancedRemote[AdvancedRemote]
+    BasicRemote[BasicRemote] -->|extends| Remote
+    AdvancedRemote[AdvancedRemote] -->|extends| Remote
 
-    Device <|.. TV[TV]
-    Device <|.. Radio[Radio]
+    TV[TV] -.->|implements| Device
+    Radio[Radio] -.->|implements| Device
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style Remote fill:#f9f,stroke:#333,stroke-width:2px

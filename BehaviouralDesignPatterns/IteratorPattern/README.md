@@ -55,7 +55,7 @@ graph TD
     Client[Main Class] -->|1. Requests Iterator| Aggregate[BookShelf]
     Aggregate -->|2. Instantiates| ConcreteIterator[BookIterator]
     Client -->|3. Traverses via hasNext & next| IteratorInterface["Iterator Interface<br/>(hasNext, next)"]
-    ConcreteIterator ..|> IteratorInterface
+    ConcreteIterator -.->|implements| IteratorInterface
     ConcreteIterator -->|4. Accesses items| Element[Book Objects]
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px

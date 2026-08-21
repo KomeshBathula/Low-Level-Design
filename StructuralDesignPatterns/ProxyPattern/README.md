@@ -60,8 +60,8 @@ graph TD
 
     Delegate --> Real[RealImage]
     
-    Proxy ..|> Interface["<<interface>><br/>Image"]
-    Real ..|> Interface
+    Proxy -.->|implements| Interface["<<interface>><br/>Image"]
+    Real -.-> Interface
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style Interface fill:#ffd,stroke:#333,stroke-width:2px

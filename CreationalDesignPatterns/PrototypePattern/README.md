@@ -45,11 +45,11 @@ Employee e2 = e1.clone(); // Fast duplication of state
 ```mermaid
 graph TD
     Client[Main Class] -->|1. Instantiates original object| E1["e1 = new Employee('Komesh', 'Developer')"]
-    Client -->|2. Calls clone()| CloneCall["e1.clone()"]
+    Client -->|2. Calls clone| CloneCall["e1.clone()"]
     CloneCall -->|3. Copies state into new object| E2["e2 (New Copy)"]
 
-    E1 ..|> Prototype[<<interface>><br/>Prototype<Employee>]
-    E2 ..|> Prototype
+    E1 -.->|implements| Prototype["<<interface>><br/>Prototype&lt;Employee&gt;"]
+    E2 -.-> Prototype
 
     style Client fill:#bbf,stroke:#333,stroke-width:2px
     style E1 fill:#ffd,stroke:#333,stroke-width:2px
